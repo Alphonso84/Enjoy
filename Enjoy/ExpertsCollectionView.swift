@@ -12,14 +12,17 @@ import UIKit
 
 class ExpertsCollectionView: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    let expertPics = [#imageLiteral(resourceName: "Janan"),#imageLiteral(resourceName: "Michael"),#imageLiteral(resourceName: "Mike")]
     @IBOutlet weak var collectionView: UICollectionView!
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-       return 12
+       return expertPics.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MyCell
+        
+        cell.profilePic?.image = expertPics[indexPath.row]
         return cell
     }
     
