@@ -41,22 +41,6 @@
             </objects>
             <point key="canvasLocation" x="-978" y="-166"/>
         </scene>
-        <!--Title-->
-        <scene sceneID="4d5-1x-cZS">
-            <objects>
-                <viewController id="u5j-BF-lHm" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="wqY-bF-IgG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="gEN-Wq-b4u"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Title" id="X48-sA-5ON"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Tgk-Ui-fxy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1815.2" y="-706.4039408866995"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="cfr-nk-5kX">
             <objects>
@@ -68,6 +52,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.99916356801986694" green="0.68601769208908081" blue="0.10268893092870712" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="wlL-PM-hzG" kind="relationship" relationship="viewControllers" id="RIA-ue-EWg"/>
@@ -187,24 +172,21 @@
             </objects>
             <point key="canvasLocation" x="1028" y="-706"/>
         </scene>
-        <!--Week Weather View Controller-->
+        <!--Experts Collection View-->
         <scene sceneID="65R-jD-d1O">
             <objects>
-                <viewController id="NDu-aY-pSC" customClass="WeekWeatherViewController" customModule="Sketch_Weather" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NDu-aY-pSC" customClass="ExpertsCollectionView" customModule="Enjoy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qD5-36-Acb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ycW-4x-WF4">
-                                <rect key="frame" x="0.0" y="88" width="375" height="659"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Enjoy_logo-2_1_" translatesAutoresizingMaskIntoConstraints="NO" id="ycW-4x-WF4">
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceHorizontal="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pnl-dh-Q6n">
-                                <rect key="frame" x="0.0" y="158" width="375" height="540"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pnl-dh-Q6n">
+                                <rect key="frame" x="0.0" y="120" width="375" height="578"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="854" id="3Nm-hg-dsZ"/>
-                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HZ2-Sb-TSL">
                                     <size key="itemSize" width="303" height="555"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -212,8 +194,8 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="nYk-JE-kOo" customClass="MyCell" customModule="Sketch_Weather" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-7.666666666666667" width="303" height="555"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="nYk-JE-kOo" customClass="MyCell" customModule="Enjoy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="11.666666666666666" width="303" height="555"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="303" height="555"/>
@@ -276,21 +258,12 @@
                                             <constraint firstItem="RBU-pN-xyz" firstAttribute="leading" secondItem="nYk-JE-kOo" secondAttribute="leading" id="ucO-Oy-dQE"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="name" destination="4NU-5K-6KX" id="lAP-rO-eJb"/>
-                                            <outlet property="weatherImage" destination="ty4-nl-MYl" id="fEf-7W-rY5"/>
+                                            <outlet property="bio" destination="Dfw-cE-kMI" id="XnK-B6-uqe"/>
+                                            <outlet property="name" destination="4NU-5K-6KX" id="tcf-L7-Mho"/>
+                                            <outlet property="profilePic" destination="ty4-nl-MYl" id="le4-Zb-lxg"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="3Nm-hg-dsZ"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="3Nm-hg-dsZ"/>
-                                    </mask>
-                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="NDu-aY-pSC" id="Qq2-bU-Fze"/>
                                     <outlet property="delegate" destination="NDu-aY-pSC" id="2Ah-U3-kvW"/>
@@ -299,52 +272,29 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="pnl-dh-Q6n" firstAttribute="trailing" secondItem="ycW-4x-WF4" secondAttribute="trailing" id="Fh2-Bi-gXQ">
-                                <variation key="heightClass=regular-widthClass=regular" constant="0.0"/>
-                            </constraint>
-                            <constraint firstItem="pnl-dh-Q6n" firstAttribute="leading" secondItem="ycW-4x-WF4" secondAttribute="leading" id="MZH-Gz-ukQ"/>
-                            <constraint firstItem="3e0-kd-pAQ" firstAttribute="bottom" secondItem="pnl-dh-Q6n" secondAttribute="bottom" constant="31" id="MmQ-O7-Od8"/>
-                            <constraint firstItem="pnl-dh-Q6n" firstAttribute="top" secondItem="3e0-kd-pAQ" secondAttribute="top" constant="70" id="ULL-by-hM7"/>
-                            <constraint firstItem="ycW-4x-WF4" firstAttribute="trailing" secondItem="pnl-dh-Q6n" secondAttribute="trailing" id="YgB-ZK-MFp"/>
+                            <constraint firstItem="pnl-dh-Q6n" firstAttribute="leading" secondItem="ycW-4x-WF4" secondAttribute="leading" id="08p-pa-Dgy"/>
+                            <constraint firstItem="pnl-dh-Q6n" firstAttribute="trailing" secondItem="ycW-4x-WF4" secondAttribute="trailing" id="MUF-lI-AnL"/>
+                            <constraint firstItem="pnl-dh-Q6n" firstAttribute="top" secondItem="3e0-kd-pAQ" secondAttribute="top" constant="32" id="Ng9-1A-HAr"/>
                             <constraint firstItem="ycW-4x-WF4" firstAttribute="bottom" secondItem="3e0-kd-pAQ" secondAttribute="bottom" id="ZGd-S4-Bgr"/>
                             <constraint firstAttribute="trailing" secondItem="ycW-4x-WF4" secondAttribute="trailing" id="g1c-f3-nCk">
-                                <variation key="heightClass=regular-widthClass=compact" constant="-55"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                                 <variation key="heightClass=regular-widthClass=regular" constant="0.0"/>
                             </constraint>
-                            <constraint firstItem="3e0-kd-pAQ" firstAttribute="bottom" secondItem="pnl-dh-Q6n" secondAttribute="bottom" constant="31" id="kah-iV-IwJ"/>
-                            <constraint firstItem="ycW-4x-WF4" firstAttribute="top" secondItem="qD5-36-Acb" secondAttribute="top" id="qug-I7-cnV"/>
-                            <constraint firstItem="ycW-4x-WF4" firstAttribute="leading" secondItem="pnl-dh-Q6n" secondAttribute="leading" id="tiG-2J-R4r"/>
+                            <constraint firstItem="pnl-dh-Q6n" firstAttribute="centerY" secondItem="ycW-4x-WF4" secondAttribute="centerY" id="grJ-qT-Krh"/>
+                            <constraint firstItem="ycW-4x-WF4" firstAttribute="top" secondItem="qD5-36-Acb" secondAttribute="top" constant="88" id="qug-I7-cnV"/>
                             <constraint firstItem="ycW-4x-WF4" firstAttribute="leading" secondItem="qD5-36-Acb" secondAttribute="leading" id="y9x-qx-C1z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3e0-kd-pAQ"/>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="kah-iV-IwJ"/>
-                                <exclude reference="MZH-Gz-ukQ"/>
-                                <exclude reference="Fh2-Bi-gXQ"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=regular">
-                            <mask key="constraints">
-                                <exclude reference="MmQ-O7-Od8"/>
-                                <include reference="kah-iV-IwJ"/>
-                                <exclude reference="tiG-2J-R4r"/>
-                                <exclude reference="YgB-ZK-MFp"/>
-                                <exclude reference="ULL-by-hM7"/>
-                                <include reference="MZH-Gz-ukQ"/>
-                                <include reference="Fh2-Bi-gXQ"/>
-                            </mask>
-                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="calendar-512" id="Qaf-z0-nTY"/>
                     <navigationItem key="navigationItem" id="Alh-M9-9i1"/>
                     <connections>
-                        <outlet property="collectionView" destination="pnl-dh-Q6n" id="5gh-9I-OFT"/>
+                        <outlet property="collectionView" destination="pnl-dh-Q6n" id="XEt-p5-ZBB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hwv-J1-zWb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2568.8000000000002" y="-706.4039408866995"/>
+            <point key="canvasLocation" x="1992.8" y="-706.4039408866995"/>
         </scene>
     </scenes>
     <resources>
