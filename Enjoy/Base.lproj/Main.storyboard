@@ -80,10 +80,10 @@
             </objects>
             <point key="canvasLocation" x="2617" y="150"/>
         </scene>
-        <!--View Controller-->
+        <!--Blog View-->
         <scene sceneID="RlF-F7-UQt">
             <objects>
-                <viewController id="mRK-GG-L1C" sceneMemberID="viewController">
+                <viewController id="mRK-GG-L1C" customClass="blogView" customModule="Enjoy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q9j-IH-rEt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,6 +107,9 @@
                         <viewLayoutGuide key="safeArea" id="0kI-es-Bqv"/>
                     </view>
                     <navigationItem key="navigationItem" id="gXx-vh-fMu"/>
+                    <connections>
+                        <outlet property="website" destination="0RK-nn-qnM" id="0Zs-Gg-f6y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w5R-b8-6Un" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -186,7 +189,7 @@
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pnl-dh-Q6n">
                                 <rect key="frame" x="0.0" y="120" width="375" height="578"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.96068006753921509" green="0.96084433794021606" blue="0.96066969633102417" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HZ2-Sb-TSL">
                                     <size key="itemSize" width="303" height="555"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -212,7 +215,7 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="33" id="vZW-YW-vOe"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="31"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Dfw-cE-kMI">
@@ -268,6 +271,12 @@
                                     <outlet property="delegate" destination="NDu-aY-pSC" id="2Ah-U3-kvW"/>
                                 </connections>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meet Our Experts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJC-da-MFa">
+                                <rect key="frame" x="84" y="88" width="206" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -275,11 +284,14 @@
                             <constraint firstItem="pnl-dh-Q6n" firstAttribute="trailing" secondItem="ycW-4x-WF4" secondAttribute="trailing" id="MUF-lI-AnL"/>
                             <constraint firstItem="pnl-dh-Q6n" firstAttribute="top" secondItem="3e0-kd-pAQ" secondAttribute="top" constant="32" id="Ng9-1A-HAr"/>
                             <constraint firstItem="ycW-4x-WF4" firstAttribute="bottom" secondItem="3e0-kd-pAQ" secondAttribute="bottom" id="ZGd-S4-Bgr"/>
+                            <constraint firstItem="aJC-da-MFa" firstAttribute="leading" secondItem="3e0-kd-pAQ" secondAttribute="leading" constant="84" id="bhI-i7-Jvt"/>
+                            <constraint firstItem="aJC-da-MFa" firstAttribute="top" secondItem="3e0-kd-pAQ" secondAttribute="top" id="byw-lb-nVi"/>
                             <constraint firstAttribute="trailing" secondItem="ycW-4x-WF4" secondAttribute="trailing" id="g1c-f3-nCk">
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                                 <variation key="heightClass=regular-widthClass=regular" constant="0.0"/>
                             </constraint>
                             <constraint firstItem="pnl-dh-Q6n" firstAttribute="centerY" secondItem="ycW-4x-WF4" secondAttribute="centerY" id="grJ-qT-Krh"/>
+                            <constraint firstItem="aJC-da-MFa" firstAttribute="centerX" secondItem="pnl-dh-Q6n" secondAttribute="centerX" id="ody-s9-O3m"/>
                             <constraint firstItem="ycW-4x-WF4" firstAttribute="top" secondItem="qD5-36-Acb" secondAttribute="top" constant="88" id="qug-I7-cnV"/>
                             <constraint firstItem="ycW-4x-WF4" firstAttribute="leading" secondItem="qD5-36-Acb" secondAttribute="leading" id="y9x-qx-C1z"/>
                         </constraints>
