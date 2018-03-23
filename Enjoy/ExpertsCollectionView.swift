@@ -11,9 +11,9 @@ import UIKit
 
 
 class ExpertsCollectionView: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-    let expertBio = ["Q: What are your hobbies outside Enjoy? A: Traveling as much as possible, watching movies, spending time with family and friends and obsessing over celebrity gossip and lipsticks. Q:What is your super power? A: Telepathy mind control, teleportation and healing powers. Also making a decision (is that a superpower?) because I can’t seem to do that."]
-    let expertNames = ["Jonan","Michael"]
-    let expertPics = [#imageLiteral(resourceName: "Janan"),#imageLiteral(resourceName: "Michael"),#imageLiteral(resourceName: "Mike")]
+    let expertBio = ["'Cordial, fast, and precise. What more can a customer ask? Thanks, Janan!'","'Michael was very nice and he answered all our questions. He also has a very approachable and good sense of humor. He was also very patient!'","'Mike was a great guy, and like-minded individual who lives in my area. He was extremely informative and helpful. He is a user of the product and was able to answer all of my very specific and oddball questions. He also clearly loved the product, which made me feel even better about the purchase than I already did!'","'George was great and couldn’t have been more helpful. Maybe I’ll buy a Sonos speaker system now that I know that there’s someone like George who’ll help me with the technical stuff!'"]
+    let expertNames = ["Jonan","Michael","Michael","George"]
+    let expertPics = [#imageLiteral(resourceName: "Janan"),#imageLiteral(resourceName: "Michael"),#imageLiteral(resourceName: "Mike"),#imageLiteral(resourceName: "George")]
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -41,6 +41,8 @@ class ExpertsCollectionView: UIViewController, UICollectionViewDelegate, UIColle
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MyCell
         
         cell.profilePic?.image = expertPics[indexPath.row]
+        cell.name?.text = expertNames[indexPath.row]
+        cell.bio?.text = expertBio[indexPath.row]
         return cell
     }
     
