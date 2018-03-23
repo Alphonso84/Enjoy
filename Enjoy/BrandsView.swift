@@ -19,6 +19,8 @@ class BrandsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         addNavBarImage()
     }
     
+    @IBAction func menuButtonPressed(_ sender: Any) {
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
