@@ -10,5 +10,8 @@ import Foundation
 import UIKit
 
 class MyBrandCell: UITableViewCell {
+    @IBOutlet weak var cellImage: UIImageView!
     
+    @IBOutlet weak var logoTopImage: UIImageView!
+    @IBOutlet weak var logoImage: UIImageView!
 }
