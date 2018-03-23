@@ -135,11 +135,11 @@
             </objects>
             <point key="canvasLocation" x="-358" y="879"/>
         </scene>
-        <!--Cities-->
+        <!--Brands-->
         <scene sceneID="lq7-L9-9zm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wlL-PM-hzG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Cities" image="cityscape" id="LZL-9h-1qB"/>
+                    <tabBarItem key="tabBarItem" title="Brands" image="buffer" id="LZL-9h-1qB"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7C9-lg-PSR">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -234,6 +234,21 @@
                                                                     <constraint firstAttribute="height" constant="152" id="khR-AN-IRL"/>
                                                                 </constraints>
                                                             </imageView>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nfx-uw-oRE">
+                                                                <rect key="frame" x="29" y="85" width="240" height="2"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" red="0.99832445380000001" green="0.73709493879999999" blue="0.28515642879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </imageView>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K9h-Rv-I3c">
+                                                                <rect key="frame" x="31" y="277" width="240" height="2"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" red="0.99832445380000001" green="0.73709493879999999" blue="0.28515642879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </imageView>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NgB-O2-0Wc">
+                                                                <rect key="frame" x="8" y="523" width="287" height="2"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <color key="backgroundColor" red="0.0043382351290000001" green="0.68837553259999995" blue="0.84322327379999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -311,8 +326,8 @@
     <resources>
         <image name="Enjoy_logo-2_1_" width="329" height="329"/>
         <image name="blog" width="40" height="40"/>
+        <image name="buffer" width="32" height="32"/>
         <image name="calendar-512" width="16" height="16"/>
-        <image name="cityscape" width="33" height="33"/>
         <image name="multiple-users-silhouette" width="42" height="42"/>
     </resources>
 </document>
