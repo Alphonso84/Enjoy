@@ -30,7 +30,7 @@ class BrandsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.detailTextLabel?.text = "AT&T"
         cell.textLabel?.contentMode = .bottomRight
         cell.imageView?.contentMode = .scaleAspectFill
-      cell.cellImage?.image = brandImages[indexPath.row]
+        cell.cellImage?.image = brandImages[indexPath.row]
         cell.cellImage?.alpha = 0.65
         cell.logoImage?.image = #imageLiteral(resourceName: "vignette3")
         cell.logoImage?.alpha = 0.65
@@ -45,8 +45,8 @@ class BrandsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let imageView = UIImageView(image: image)
         let bannerWidth = navController.navigationBar.frame.size.width
         let bannerHeight = navController.navigationBar.frame.size.height
-        let bannerX = bannerWidth / 2 - image.size.width / 2
-        let bannerY = bannerHeight / 2 - image.size.height / 2
+        let bannerX = bannerWidth - image.size.width
+        let bannerY = bannerHeight - image.size.height
         imageView.frame = CGRect(x: bannerX, y: bannerY, width: bannerWidth, height: bannerHeight)
         imageView.contentMode = .scaleAspectFit
         navigationItem.titleView = imageView

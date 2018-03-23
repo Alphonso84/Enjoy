@@ -34,7 +34,7 @@ class ExpertsCollectionView: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-       return expertPics.count
+        return expertPics.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -46,7 +46,7 @@ class ExpertsCollectionView: UIViewController, UICollectionViewDelegate, UIColle
         return cell
     }
     
-   
+    
     
     override func viewWillAppear(_ animated: Bool) {
         

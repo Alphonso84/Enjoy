@@ -10,7 +10,7 @@ import UIKit
 import WebKit
 
 class blogView: UIViewController  {
-   
+    
     @IBOutlet weak var website: WKWebView!
     
     var url: URL!
@@ -38,12 +38,12 @@ class blogView: UIViewController  {
         imageView.contentMode = .scaleAspectFit
         navigationItem.titleView = imageView
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
