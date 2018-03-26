@@ -16,3 +16,7 @@ struct Expert {
     let bio: String
 }
 
+struct Brand {
+    let brandImage: UIImage
+    let brandLogo: UIImage
+}

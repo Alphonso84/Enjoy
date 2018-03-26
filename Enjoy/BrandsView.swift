@@ -11,31 +11,47 @@ import UIKit
 
 class BrandsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
+    //ARRAY OF BRANDS
+    var brandsArray = [Brand]()
+   
     
-    var brandImages = [#imageLiteral(resourceName: "ATT"),#imageLiteral(resourceName: "Sonos"),#imageLiteral(resourceName: "Dji"),#imageLiteral(resourceName: "eero"),#imageLiteral(resourceName: "Tag Heuer")]
-    var brandLogo = [#imageLiteral(resourceName: "AT&T logo"),#imageLiteral(resourceName: "sonos logo"),#imageLiteral(resourceName: "dji logo"),#imageLiteral(resourceName: "eero logo"),#imageLiteral(resourceName: "tag heuer logo")]
+    //BRANDS
+    let att = Brand(brandImage: #imageLiteral(resourceName: "ATT"), brandLogo: #imageLiteral(resourceName: "AT&T logo"))
+    let sonos = Brand(brandImage: #imageLiteral(resourceName: "Sonos"), brandLogo: #imageLiteral(resourceName: "sonos logo"))
+    let dji = Brand(brandImage: #imageLiteral(resourceName: "Dji"), brandLogo: #imageLiteral(resourceName: "dji logo"))
+    let eero = Brand(brandImage: #imageLiteral(resourceName: "eero"), brandLogo: #imageLiteral(resourceName: "eero logo"))
+    let tagHeuer = Brand(brandImage: #imageLiteral(resourceName: "Tag Heuer"), brandLogo: #imageLiteral(resourceName: "tag heuer logo"))
+    let nike = Brand(brandImage: #imageLiteral(resourceName: "Nike image"), brandLogo: #imageLiteral(resourceName: "Nike Logo"))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         addNavBarImage()
+        brandsArray.removeAll()
+        brandsArray.append(att)
+        brandsArray.append(sonos)
+        brandsArray.append(dji)
+        brandsArray.append(eero)
+        brandsArray.append(tagHeuer)
+        brandsArray.append(nike)
     }
     
-    @IBAction func menuButtonPressed(_ sender: Any) {
-    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return brandsArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MyBrandCell
-        cell.detailTextLabel?.text = "AT&T"
+        //cell.detailTextLabel?.text = "AT&T"
         cell.textLabel?.contentMode = .bottomRight
         cell.imageView?.contentMode = .scaleAspectFill
-        cell.cellImage?.image = brandImages[indexPath.row]
+        cell.cellImage?.image = brandsArray[indexPath.row].brandImage
         cell.cellImage?.alpha = 0.65
         cell.logoImage?.image = #imageLiteral(resourceName: "vignette3")
         cell.logoImage?.alpha = 0.65
         cell.logoTopImage?.contentMode = .scaleAspectFit
-        cell.logoTopImage?.image = brandLogo[indexPath.row]
+        cell.logoTopImage?.image = brandsArray[indexPath.row].brandLogo
         
         return cell
     }
